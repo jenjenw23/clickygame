@@ -1,37 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
-import Panel from "./components/Panel";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+import cards from "./cards.json";
 
-const App = () => (
-  <div className="container">
-    <Navbar />
-    <Jumbotron />
-    <Panel />
-  </div>
-);
+class App extends Component {
+  // Setting this.state.friends to the friends json array
+  state = {
+    cards
+  };
+
+  // removeFriend = id => {
+  //   // Filter this.state.friends for friends with an id not equal to the id being removed
+  //   const friends = this.state.friends.filter(friend => friend.id !== id);
+  //   // Set this.state.friends equal to the new friends array
+  //   this.setState({ friends });
+  // };
+
+  // Map over this.state.friends and render a FriendCard component for each friend object
+  render() {
+    return (
+       <Wrapper>
+        <Navbar />
+        <Jumbotron />
+        {this.state.cards.map(card => (
+          <FriendCard
+            // removeFriend={this.removeFriend}
+            id={card.id}
+            key={card.id}
+            name={card.name}
+            image={card.image}
+          />
+        ))}
+      </Wrapper>
+    );
+  }
+}
 
 export default App;
-
-
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;

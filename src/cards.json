@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Gray space shuttle",
+    "image": "/assets/images/space-001.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Saturn",    
+    "image": "/assets/images/space-002.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Earth",    
+    "image": "/assets/images/space-003.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Alien space ship",    
+    "image": "/assets/images/space-004.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Meteor",    
+    "image": "/assets/images/space-005.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Red space shuttle",    
+    "image": "/assets/images/space-006.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Constellation",    
+    "image": "/assets/images/space-007.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Red Moon",    
+    "image": "/assets/images/space-008.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Cresent moon with clouds",    
+    "image": "/assets/images/space-009.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Blue alien",    
+    "image": "/assets/images/space-010.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Sun",    
+    "image": "/assets/images/space-011.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Falling stars",    
+    "image": "/assets/images/space-012.jpg"
+  }
+]
