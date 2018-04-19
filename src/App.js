@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
-import FriendCard from "./components/FriendCard";
+import SpaceCard from "./components/SpaceCard";
 import Wrapper from "./components/Wrapper";
 import cards from "./cards.json";
 
@@ -24,8 +24,9 @@ class App extends Component {
        <Wrapper>
         <Navbar />
         <Jumbotron />
+        <div className="container">
         {this.state.cards.map(card => (
-          <FriendCard
+          <SpaceCard
             // removeFriend={this.removeFriend}
             id={card.id}
             key={card.id}
@@ -33,6 +34,7 @@ class App extends Component {
             image={card.image}
           />
         ))}
+        </div>
       </Wrapper>
     );
   }

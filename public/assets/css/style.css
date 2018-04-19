@@ -3,10 +3,11 @@
     color: #66b6d8;
     font-family: 'Roboto', sans-serif;
     padding: 120px 20px 60px 20px;
+    width: 100%;
 }
 
 body {
-    background-color: #fff;
+    background: #ECEFF1;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -15,6 +16,14 @@ h1 {
 }
 .navbar{
     background-color:rgb(244, 211, 101);
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 960px;
 }
 
 /* 
