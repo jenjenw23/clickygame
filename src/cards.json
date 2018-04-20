@@ -2,73 +2,73 @@
   {
     "id": 1,
     "name": "Gray space shuttle",
-    "selected": false,
+    "clicked": false,
     "image": "/assets/images/space-001.jpg"
   },
   {
     "id": 2,
     "name": "Saturn",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-002.jpg"
   },
   {
     "id": 3,
     "name": "Earth",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-003.jpg"
   },
   {
     "id": 4,
     "name": "Alien space ship",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-004.jpg"
   },
   {
     "id": 5,
     "name": "Meteor",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-005.jpg"
   },
   {
     "id": 6,
     "name": "Red space shuttle",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-006.jpg"
   },
   {
     "id": 7,
     "name": "Constellation",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-007.jpg"
   },
   {
     "id": 8,
     "name": "Red Moon",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-008.jpg"
   },
   {
     "id": 9,
     "name": "Cresent moon with clouds",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-009.jpg"
   },
   {
     "id": 10,
     "name": "Blue alien",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-010.jpg"
   },
   {
     "id": 11,
     "name": "Sun",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-011.jpg"
   },
   {
     "id": 12,
     "name": "Falling stars",
-    "selected": false,    
+    "clicked": false,    
     "image": "/assets/images/space-012.jpg"
   }
 ]

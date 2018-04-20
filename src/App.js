@@ -10,13 +10,16 @@ class App extends Component {
   state = {
     cards,
     score: 0,
-    topScore: 0
+    topScore: 0,
+    feedback:"Click on an image to begin", 
+    clicked: []
   };
 
   onClickHandler = id => {
-    if (this.state.score > 12) {
+    if (this.state.score === 12) {
       this.resetHandler();
     }else{
+      this.state.clicked.push(id);   
       this.scoreHandler();
       this.shuffleCards();
       console.log(this.state);  
@@ -26,6 +29,7 @@ class App extends Component {
   scoreHandler = () => {
     const newScore = this.state.score + 1;
     this.setState({score: newScore});
+    this.setState({feedback: "You guessed correctly!"}); 
   }
  
   shuffleCards = () => {
@@ -40,11 +44,11 @@ class App extends Component {
   resetHandler = () => {
     this.setState({
       score: 0,
-      topScore: this.state.topScore
+      topScore: this.state.topScore,
+      feedback:"Click on an image to begin"
     });
     this.shuffleCards();
   };
-  
 
   // Render a SpaceCard component for each card object
   render() {
@@ -52,20 +56,28 @@ class App extends Component {
        <Wrapper>
         <Navbar />
         <Jumbotron />
-        <div className="row">
-          <h3>Score: {this.state.score} | Top Score: {this.state.topScore}</h3> 
-        </div>
+        
         <div className="container">
-          {this.state.cards.map(card => (
-            <SpaceCard
-            onClickHandler={this.onClickHandler}
-              id={card.id}
-              key={card.id}
-              name={card.name}
-              image={card.image}
-              selected={card.selected}
-            />
-          ))}
+          <div className="row" >
+          <div className="col-lg-6 text-center">
+              <h3>{this.state.feedback}</h3> 
+            </div>
+            <div className="col-lg-6 text-center">
+              <h3>Score: {this.state.score} | Top Score: {this.state.topScore}</h3> 
+            </div>
+          </div>
+            <div className="row">
+              {this.state.cards.map(card => (
+                <SpaceCard
+                onClickHandler={this.onClickHandler}
+                  id={card.id}
+                  key={card.id}
+                  name={card.name}
+                  image={card.image}
+                  clicked={card.clicked}
+                />
+              ))}
+            </div>
         </div>
       </Wrapper>
     );

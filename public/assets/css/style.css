@@ -26,6 +26,9 @@ h3{
     background-color:rgb(244, 211, 101);
 }
 
+.row{
+    width:100%;
+}
 .container{
     display: flex;
     flex-flow: row wrap;
