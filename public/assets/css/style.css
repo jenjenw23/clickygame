@@ -2,7 +2,7 @@
     background-image: url("/assets/images/header.jpg");
     color: #66b6d8;
     font-family: 'Roboto', sans-serif;
-    padding: 120px 20px 60px 20px;
+    padding: 90px 20px 60px 20px;
     width: 100%;
 }
 
@@ -12,24 +12,27 @@ body {
 }
 
 h1 {
-	color:rgb(244, 211, 101);
+    color: rgb(244, 211, 101);
 }
 
 h2 {
     color: #6ba7d6;
 }
 
-h3{
-    color: #273454;  
-}
-.navbar{
-    background-color:rgb(244, 211, 101);
+h3 {
+    color: #273454;
+    font-size: 25px;
 }
 
-.row{
-    width:100%;
+.navbar {
+    background-color: rgb(244, 211, 101);
 }
-.container{
+
+.row {
+    width: 100%;
+}
+
+.container {
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
@@ -37,70 +40,48 @@ h3{
     max-width: 960px;
 }
 
-/* .navbar li {
-    display: inline-block;
-    padding: 26px 0;
-    width: 33.3%;
-    text-align: center;
-} */
-
-/* 
-li {
-  padding: 5px 20px 10px 5px;
-  margin: 5px 5px 10px 5px;
-  background: #22c93c;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 5px;
-}
-.finished {
-    text-decoration: line-through;
+.h3 .correct {
+    -webkit-animation: 1s correct;
+    animation: 1s correct
 }
 
-.label {
-  font-weight: bold;
+.h3 .incorrect {
+    -webkit-animation: 1s incorrect;
+    animation: 1s incorrect
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+@-webkit-keyframes correct {
+    0% {color: #fff}
+    20% {color: #2e7d32}
+    40% {color: #fff}
+    60% {font-weight: #2e7d32}
+    80% {font-weight: #fff}
+    to {font-weight: #2e7d32}
 }
 
-.form-group {
-  margin-bottom: 5px;
+@keyframes correct {
+    0% {color: #fff}
+    20% {color: #2e7d32}
+    40% {color: #fff}
+    60% {font-weight: #2e7d32}
+    80% {font-weight: #fff}
+    to {font-weight: #2e7d32}
 }
 
-h2, h3 {
-	color:#65E0F4;
+@-webkit-keyframes incorrect {
+    0% {color: #fff}
+    20% {color: #c62828}
+    40% {color: #fff}
+    60% {font-weight: #c62828}
+    80% {font-weight: #fff}
+    to {font-weight: #c62828}
 }
 
-button.change-state {
-	float:right;
+@keyframes incorrect {
+    0% {color: #fff}
+    20% {color: #c62828}
+    40% {color: #fff}
+    60% {font-weight: #c62828}
+    80% {font-weight: #fff}
+    to {font-weight: #c62828}
 }
-
-.panel {
-	background-color:#22c93c;
-}
-
-.panel-primary {
-    border-color: #000;
-}
-
-.panel-primary > .panel-heading {
-    color:#65E0F4;
-    background-color:#434343;
-    border-color: #337ab7;
-}
-
-#overlay {
-    display:none;
-    position: absolute;    
-    width:100px;
-    height:100px;
-    background-color: gray;
-    top: 50px;
-    left: 50px;
-    padding: 10px;
-    opacity: .8;
-} */

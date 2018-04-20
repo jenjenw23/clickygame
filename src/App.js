@@ -16,20 +16,26 @@ class App extends Component {
   };
 
   onClickHandler = id => {
-    if (this.state.score === 12) {
-      this.resetHandler();
-    }else{
+    if (this.state.clicked.indexOf(id) === -1) {
       this.state.clicked.push(id);   
       this.scoreHandler();
       this.shuffleCards();
-      console.log(this.state);  
+      console.log(this.state); 
+    } else if (this.state.score === 12) {
+        this.resetHandler();
+    } else {
+        this.setState({feedback: "You guessed incorrectly! Play again!"}); 
+        this.resetHandler();
     }
   };
  
   scoreHandler = () => {
     const newScore = this.state.score + 1;
     this.setState({score: newScore});
-    this.setState({feedback: "You guessed correctly!"}); 
+    this.setState({feedback: "You guessed correctly!"});
+    if (newScore >= this.state.topScore) {
+      this.setState({ topScore: newScore });
+    } 
   }
  
   shuffleCards = () => {
@@ -45,7 +51,7 @@ class App extends Component {
     this.setState({
       score: 0,
       topScore: this.state.topScore,
-      feedback:"Click on an image to begin"
+      clicked: []
     });
     this.shuffleCards();
   };
@@ -59,7 +65,7 @@ class App extends Component {
         
         <div className="container">
           <div className="row" >
-          <div className="col-lg-6 text-center">
+            <div className="col-lg-6 text-center">
               <h3>{this.state.feedback}</h3> 
             </div>
             <div className="col-lg-6 text-center">
