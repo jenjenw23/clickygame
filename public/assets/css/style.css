@@ -14,6 +14,14 @@ body {
 h1 {
 	color:rgb(244, 211, 101);
 }
+
+h2 {
+    color: #6ba7d6;
+}
+
+h3{
+    color: #273454;  
+}
 .navbar{
     background-color:rgb(244, 211, 101);
 }

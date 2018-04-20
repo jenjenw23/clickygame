@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg fixed-top">
-  <a className="navbar-brand" href="/">Clicky Game</a>
+  <a className="navbar-brand" href="/">Space Adventure Clicky Game</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -10,14 +10,6 @@ const Navbar = () => (
 
     <ul className="navbar-nav">
       {/* <li class="">Click an image to begin!</li>   */}
-      <li>Score: 0 | Top Score: 0</li>
-      {/* <li className="nav-item active">
-        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-      </li> */}
-      {/* <li className="nav-item">
-        <a className="nav-link" href="#">Features</a>
-      </li> */}
-
     </ul>
   </div>
 </nav>
