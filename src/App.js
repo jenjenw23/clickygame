@@ -6,19 +6,28 @@ import Wrapper from "./components/Wrapper";
 import cards from "./cards.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.cars to the cards json array
   state = {
-    cards
+    cards,
+    score: 0
   };
 
-  // removeFriend = id => {
-  //   // Filter this.state.friends for friends with an id not equal to the id being removed
-  //   const friends = this.state.friends.filter(friend => friend.id !== id);
-  //   // Set this.state.friends equal to the new friends array
-  //   this.setState({ friends });
-  // };
+  onClickHandler = id => {
+    this.scoreHandler();
+    console.log(this.state);
+    // this.shuffleCards();
+  }
+ 
+  scoreHandler = () => {
+    const newScore = this.state.score + 1;
+    this.setState({score: newScore});
+  }
+ 
+  shuffleCards = () => {
+    // shuffle the cards
+  }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Render a SpaceCard component for each card object
   render() {
     return (
        <Wrapper>
@@ -27,11 +36,12 @@ class App extends Component {
         <div className="container">
         {this.state.cards.map(card => (
           <SpaceCard
-            // removeFriend={this.removeFriend}
+          onClickHandler={this.onClickHandler}
             id={card.id}
             key={card.id}
             name={card.name}
             image={card.image}
+            selected={card.selected}
           />
         ))}
         </div>
