@@ -4,7 +4,7 @@ Space Adventure Clicky Game is a simple memory game. Click on each card once to 
 
 Built with React, Node and Javascript. 
 
-[Space Adventure Clicky Game on Heroku](https://arcane-bastion-92075.herokuapp.com/)
+[Space Adventure Clicky Game on Heroku](https://quiet-anchorage-44737.herokuapp.com/)
 
 ## App Screenshot
-![App Screenshot](https://github.com/jenjenw23/jenjenw23.github.io/blob/master/assets/images/news-scraper.jpg)
+![App Screenshot](https://github.com/jenjenw23/clickygame/blob/master/public/assets/images/screenshot.jpg)
