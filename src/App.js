@@ -20,8 +20,8 @@ class App extends Component {
       this.state.clicked.push(id);   
       this.scoreHandler();
       this.shuffleCards();
-      console.log(this.state); 
     } else if (this.state.score === 12) {
+        this.scoreHandler();
         this.resetHandler();
     } else {
         this.setState({feedback: "You guessed incorrectly! Play again!"}); 
@@ -31,8 +31,12 @@ class App extends Component {
  
   scoreHandler = () => {
     const newScore = this.state.score + 1;
-    this.setState({score: newScore});
-    this.setState({feedback: "You guessed correctly!"});
+    this.setState({score: newScore});    
+    if (this.state.score === 12) {
+      this.setState({feedback: "You win! Play again!"}); 
+    }  else {
+      this.setState({feedback: "You guessed correctly!"});      
+    }
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
     } 
